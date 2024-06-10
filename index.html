@@ -7,24 +7,17 @@
 </head>
 <body>
 
-<section id="la_photo">
-  <img src="">
-  <h4>titre</h4>
-  <p>description</p>
-  <p>type, defX x defY</p>
-  <h4 id="la_categorie">categorie : categorie de l'image</h4>
-  <h4>commentaires : </h4>
-  <ul id="les_commentaires">
-    <li>pseudo : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, vitae.</li>
-    <li>pseudo : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, recusandae.</li>
-  </ul>
-
-</section>
-
-
 <main id="photo"></main>
 
 <script id="photoTemplate" type="text/x-handlebars-template">
+  <section id="la_photo">
+    <img src={{url}}>
+    <h4>{{titre}}</h4>
+    <p>{{format}}, {{width}} x {{height}}</p>
+    <h4>commentaires : </h4>
+    <ul id="les_commentaires">
+    </ul>
+  </section>
 </script>
 
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
