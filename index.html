@@ -7,22 +7,29 @@
 </head>
 <body>
 
-<main id="photo"></main>
+<main id="la_photo"></main>
 
 <script id="photoTemplate" type="text/x-handlebars-template">
-  <section id="{{id}}">
+  <h1>Photo : {{id}}</h1>
+  <section id="la_photo">
     <img src={{url}}>
     <h4>{{titre}}</h4>
     <p>{{descr}}</p>
     <p>{{format}}, {{width}} x {{height}}</p>
-    <h4 id="la_categorie">categorie : {{categorie}}</h4>
+    <h4 id="la_categorie">}</h4>
     <h4>commentaires : </h4>
-    <ul id="les_commentaires">
-      {{#each comments}}
-        <li>{{this.pseudo}} : {{this.content}}</li>
-      {{/each}}
-    </ul>
+    <ul id="les_commentaires"></ul>
   </section>
+</script>
+
+<script id="categorieTemplate" type="text/x-handlebars-template">
+  Catégorie : {{nom}}
+</script>
+
+<script id="commentairesTemplate" type="text/x-handlebars-template">
+  {{#each commentaires}}
+    <li>{{this.pseudo}} : {{this.content}}</li>
+  {{/each}}
 </script>
 
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
