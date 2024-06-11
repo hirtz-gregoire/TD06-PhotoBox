@@ -13,9 +13,14 @@
   <section id="la_photo">
     <img src={{url}}>
     <h4>{{titre}}</h4>
+    <p>{{descr}}</p>
     <p>{{format}}, {{width}} x {{height}}</p>
+    <h4 id="la_categorie">categorie : {{categorie}}</h4>
     <h4>commentaires : </h4>
     <ul id="les_commentaires">
+      {{#each comments}}
+        <li>{{this.pseudo}} : {{this.content}}</li>
+      {{/each}}
     </ul>
   </section>
 </script>
