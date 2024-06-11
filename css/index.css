@@ -2,3 +2,18 @@ img {
     max-width: 30rem;
     height: auto;
 }
+
+
+#galerie{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 1em;
+    list-style: none;
+}
+
+#galerie li{
+    background-color: red;
+    margin: 0 1em 0.2em 1em;
+    display: flex;
+}

@@ -7,7 +7,19 @@
 </head>
 <body>
 
-<main id="la_photo"></main>
+<header>
+  <button id="first">first</button>
+  <button id="prev">prev</button>
+  <button id="load">load</button>
+  <button id="next">next</button>
+  <button id="last">last</button>
+
+</header>
+
+<main>
+</main>
+
+
 
 <script id="photoTemplate" type="text/x-handlebars-template">
   <h1>Photo : {{id}}</h1>
@@ -16,7 +28,7 @@
     <h4>{{titre}}</h4>
     <p>{{descr}}</p>
     <p>{{format}}, {{width}} x {{height}}</p>
-    <h4 id="la_categorie">}</h4>
+    <h4 id="la_categorie"></h4>
     <h4>commentaires : </h4>
     <ul id="les_commentaires"></ul>
   </section>
@@ -30,6 +42,16 @@
   {{#each commentaires}}
     <li>{{this.pseudo}} : {{this.content}}</li>
   {{/each}}
+</script>
+
+<script id="galerieTemplate" type="text/x-handlebars-template">
+  <ul id="galerie">
+  {{#each galerie}}
+    <li>
+      <img class="galerie_picture" src="https://webetu.iutnc.univ-lorraine.fr{{this.photo.thumbnail.href}}">
+    </li>
+  {{/each}}
+  </ul>
 </script>
 
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
