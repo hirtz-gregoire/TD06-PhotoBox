@@ -19,6 +19,8 @@
 <main>
 </main>
 
+<section id="la_photo"></section>
+
 
 
 <script id="photoTemplate" type="text/x-handlebars-template">
@@ -48,7 +50,7 @@
   <ul id="galerie">
   {{#each galerie}}
     <li>
-      <img class="galerie_picture" src="https://webetu.iutnc.univ-lorraine.fr{{this.photo.thumbnail.href}}">
+      <img onclick="showPhoto(105)" class="galerie_picture" src="https://webetu.iutnc.univ-lorraine.fr{{this.photo.thumbnail.href}}">
     </li>
   {{/each}}
   </ul>

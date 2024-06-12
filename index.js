@@ -68,6 +68,12 @@ document.getElementById("last").addEventListener("click", function(){
     load();
 })
 
+
+function showPhoto(id){
+    getPicture(id);
+}
+
+
 document.onload = load();
 
-
+window.showPhoto = showPhoto;

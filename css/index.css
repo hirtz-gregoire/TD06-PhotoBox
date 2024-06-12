@@ -3,17 +3,28 @@ img {
     height: auto;
 }
 
+body{
+    background-color: gray;
+}
+
 
 #galerie{
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     padding: 1em;
     list-style: none;
 }
 
 #galerie li{
-    background-color: red;
-    margin: 0 1em 0.2em 1em;
+    width: 300px;
+    height: 200px;
+    margin:0.2em;
+    border: 1px solid black;
     display: flex;
+}
+
+li img{
+    width: 100%;
+    object-fit: cover;
 }
