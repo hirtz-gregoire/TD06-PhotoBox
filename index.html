@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<header>
+<header class="on">
   <button id="first">first</button>
   <button id="prev">prev</button>
   <button id="load">load</button>
@@ -16,17 +16,15 @@
 
 </header>
 
-<main>
-</main>
-
-<section id="la_photo"></section>
+<main class="onn"></main>
+<section class="on" id="la_photo"></section>
 
 
 
 <script id="photoTemplate" type="text/x-handlebars-template">
   <h1>Photo : {{id}}</h1>
   <section id="la_photo">
-    <img src={{url}}>
+    <div><img src={{url}}></div>
     <h4>{{titre}}</h4>
     <p>{{descr}}</p>
     <p>{{format}}, {{width}} x {{height}}</p>
@@ -50,7 +48,7 @@
   <ul id="galerie">
   {{#each galerie}}
     <li>
-      <img onclick="showPhoto(105)" class="galerie_picture" src="https://webetu.iutnc.univ-lorraine.fr{{this.photo.thumbnail.href}}">
+      <img onclick="showPhoto({{this.photo.id}})" class="galerie_picture" src="https://webetu.iutnc.univ-lorraine.fr{{this.photo.thumbnail.href}}">
     </li>
   {{/each}}
   </ul>
